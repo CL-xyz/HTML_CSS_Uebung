@@ -1,0 +1,112 @@
+/* Prio: Inline > Internes CSS > Externes CSS*/
+
+body{
+    background-color: #21D4FD;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+}
+
+h1{
+    text-decoration: underline;
+    color: lightgray;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 2em;
+}
+h1::first-letter{
+    font-size: 1.4em;
+    color: white;
+}
+
+h1::first-line{
+    background-color: grey;
+}
+
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    text-indent: 1.5em;
+    color: lightgray;
+    background-color: gray;
+    box-shadow: 0px 0px 10px 6px darkgray;
+}
+
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#linkleiste_top{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+    text-decoration: none;
+}
+
+
+/*Attribute*/
+
+#linkleiste_top:visited{
+    color: white;
+}
+
+#linkleiste_top:active{
+    color: aqua;
+}
+
+#linkleiste_top:focus{
+    color: aqua;
+}
+
+#linkleiste_top:hover{
+    color: #4facfe;
+}
+
+div{
+    /*text-indent: 1.5em;*/
+    width: 70%;
+    height: 30px;
+    border: 15px solid gray;
+    padding: 25px;
+    margin: 20px;
+    background-color: lightgrey;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5em;
+
+    /*Box!*/
+    width: auto;
+
+}
+
+p::first-letter{
+    font-size: 3em;
+    color: white;
+    background-color: lightgrey;
+    font-style: italic;
+
+}
+
+
+.divy{
+    width: auto;
+    margin: 20px;
+    background-color: grey;
+    border: 3px;
+    box-shadow: 6px 6px 6px 4px rgb(84, 84, 122);
+}
+
+.flexy{
+    display: flex;
+}
+/*p::first-line{
+    background-color: rgb(255, 255, 255);
+}*/
+
+

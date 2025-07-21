@@ -1,0 +1,182 @@
+/* Header! */
+.header{
+    padding: 30px;
+    text-align: center;
+    background: lightgray;
+    color: black;
+    font-size: 25px;
+}
+
+/* CSS für Sticky Navbar! */
+/* Navbar! */
+#Navbar{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Navbar-Links! */
+#Navbar a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-family: fantasy;
+}
+
+#Navbar a:hover{
+    color: crimson;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+/* Page-Content! */
+.content{
+    padding: 16px;
+}
+
+/* Sticky-Class! */
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content{
+    padding-top: 60px;
+}
+
+.flexy{
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: stretch;
+    display: flex;
+}
+
+.divy{
+    width: auto;
+    padding: 3px;
+    margin: 20px;
+    background-color: grey;
+    border: 3px;
+    box-shadow: 6px 6px 6px 4px lightgray;
+}
+
+/* Grid! */
+#container{
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: auto 50% 30px;
+    grid-template-areas: "area2 area3" "area4 area3" "area1 area1";
+    background-color: darkorange;
+    padding: 10px;
+    margin: 5px;
+    min-height: 200px;
+}
+
+#container > div{
+    border: 2px solid;
+    background-color: orange;
+    margin: 5px;
+}
+#item1 { grid-area: area1; }
+#item2 { grid-area: area2; }
+#item3 { grid-area: area3; }
+#item4 { grid-area: area4; }
+
+/* Iframe Flexbox */
+.row-container {
+    display: flex; width: 100%; height: 100%; flex-direction: column;
+}
+.first-row {
+    background-color: lime;
+}
+.second-row {
+    flex-grow: 1; border: none; margin: 0; padding: 0;
+}
+
+.inhaltscontainer{
+    border: solid darkgray;
+    margin: 5px;
+    display: grid;
+    grid-template-areas: "FlaecheLi FlaecheRe";
+}
+.inhaltscontainer > div{
+    border: 2px;
+    margin: 5px;
+}
+
+#container_li{grid-area: FlaecheLi;}
+#container_re{grid-area: FlaecheRe;}
+
+
+.navblocklinks{
+    position: -webkit-sticky;
+    position: fixed;
+    top: 50px;
+    background-color: darkgrey;
+    /*border-right: solid 4px darkgrey;*/
+    display: inline-block;
+    /*height: 600px;*/
+    width: 50px;
+}
+
+.hauptinhalt{
+    display: inline-block;
+    /*height: 600px;*/
+    background-color: lightgray;
+}
+
+.navbarlinks{
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 400px) {
+    .navbarlinks{
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .navbarlinks a{float: left;}
+    div.main{margin-left: 0;}
+    
+}
+
+.navbarlinks a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+
+  .navbarlinks a:hover{
+    color: crimson;
+  }
+
+  .main{
+    margin-left: 160px; /*Muss gleich der Width von Navbarlinks sein*/
+    padding: 0px 10px;
+  }
